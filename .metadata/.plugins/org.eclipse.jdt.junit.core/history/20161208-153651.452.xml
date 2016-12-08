@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="JaarTest" project="applicatieMetTesten" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="be.vdab.valueobjects.JaarTest" time="0.001">
+    <testcase name="eenJaarNietDeelbaarDoor4IsGeenSchrikkeljaar" classname="be.vdab.valueobjects.JaarTest" time="0.001"/>
+    <testcase name="eenJaarDeelbaarDoor4IsEenSchikkeljaar" classname="be.vdab.valueobjects.JaarTest" time="0.0"/>
+    <testcase name="eenJaarDeelbaarDoor100IsGeenSchrikkeljaar" classname="be.vdab.valueobjects.JaarTest" time="0.0"/>
+    <testcase name="eenJaarDeelbaarDoor400IsEenSchrikkeljaar" classname="be.vdab.valueobjects.JaarTest" time="0.0"/>
+  </testsuite>
+</testrun>
