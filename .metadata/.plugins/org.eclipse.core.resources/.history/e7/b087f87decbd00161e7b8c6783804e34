@@ -1,0 +1,24 @@
+package be.vdab.taken;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class WoordTest {
+
+	@Test
+	public void lepelIsEenPalindroom() {
+		assertTrue(new Woord("lepel").isPalindroom());
+	}
+	
+	@Test
+	public void kanonIsGeenPalindroom(){
+		assertFalse(new Woord("kanon").isPalindroom());
+	}
+	
+	@Test
+	public void eenLegeStringIsEenPalindroom(){
+		assertTrue(new Woord("po").isPalindroom());
+	}
+
+}

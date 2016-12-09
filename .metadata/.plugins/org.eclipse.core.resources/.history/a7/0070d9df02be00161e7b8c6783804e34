@@ -1,0 +1,13 @@
+package be.vdab.valueobjects;
+
+public class Rekeningnummer {
+	
+	public void Rekeningnummer(String nummer){
+		throw new UnsupportedOperationException();
+	}
+	
+	public String toString(){
+		throw new UnsupportedOperationException();
+	}
+
+}

@@ -1,0 +1,14 @@
+package be.vdab.util;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ConverterTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,10 @@
+package be.vdab.util;
+
+import java.math.BigDecimal;
+
+public class Statistiek {
+	
+	public BigDecimal getGemiddelde(BigDecimal[] getallen){
+		throw new IllegalArgumentException();
+	}
+}

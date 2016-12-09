@@ -1,0 +1,14 @@
+package be.vdab.entities;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class RekeningTest {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

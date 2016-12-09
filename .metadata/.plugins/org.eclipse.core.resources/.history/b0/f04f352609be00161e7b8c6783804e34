@@ -1,0 +1,49 @@
+package be.vdab.valueobjects;
+
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class RekeningnummerTest {
+
+
+	@Test
+	public void nummerMoet12CijfersBevatten() {
+		new Rekeningnummer("063-1547564-61");
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void nummerMagGeen13CijfersBevatten(){
+		new Rekeningnummer("133-4567892-345");
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void nummerMagGeen11CijfersBevatten(){
+		new Rekeningnummer("113-4567489-1");
+	}
+	
+	@Test 
+	public void de4deEn12dePositieBevatGeenMinTeken(){
+		new Rekeningnummer("123456789123");
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void laatste2CijfersZijnNietGelijkAanEerste10Mod97(){
+		new Rekeningnummer("123-4567891-23");
+	}
+	
+	@Test
+	public void laatste2CijfersZijnGelijkAanEerste10Mod97(){
+		new Rekeningnummer("063-1547564-61");
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void constructorMagGeenNullAanvaarden(){
+		new Rekeningnummer(null);
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void constructorMagGeenLegeStringAanvaarden(){
+		new Rekeningnummer("");
+	}
+
+}

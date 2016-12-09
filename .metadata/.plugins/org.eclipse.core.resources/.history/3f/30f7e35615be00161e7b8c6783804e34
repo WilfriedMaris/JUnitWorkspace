@@ -1,0 +1,16 @@
+package be.vdab.util;
+
+import java.math.BigDecimal;
+
+public class Statistiek {
+	
+	public static BigDecimal getGemiddelde(BigDecimal[] getallen){
+		int teller = 0;
+		BigDecimal som = BigDecimal.ZERO;
+		while(teller < getallen.length){
+			som = som.add(getallen[teller]);
+			teller++;
+		}
+		return som.divide(BigDecimal.valueOf(getallen.length));
+	}
+}

@@ -1,0 +1,35 @@
+package be.vdab.entities;
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+
+import org.junit.Test;
+
+public class RekeningTest {
+
+	@Test
+	public void hetSaldoVanEenNieuweRekeningIsNul() {
+		Rekening rekening = new Rekening();
+		assertTrue(rekening.getSaldo().compareTo(BigDecimal.ZERO) == 0);
+	}
+	
+	@Test
+	public void saldoVanRekeningMetEenStortingisGelijkAanDeStorting(){
+		Rekening rekening = new Rekening();
+		BigDecimal bedrag = BigDecimal.valueOf(200);
+		rekening.storten(bedrag);
+		assertTrue(rekening.getSaldo().compareTo(bedrag) == 0);
+	}
+	
+	@Test
+	public void saldoRekeningMetTweeStortingenIsGelijkAanSomStortingen(){
+		Rekening rekening = new Rekening();
+		BigDecimal bedrag1 = BigDecimal.valueOf(100);
+		BigDecimal bedrag2 = BigDecimal.valueOf(350);
+		rekening.storten(bedrag1);
+		rekening.storten(bedrag2);
+		assertTrue(rekening.getSaldo().compareTo(bedrag1.add(bedrag2)) == 0);
+	}
+
+}

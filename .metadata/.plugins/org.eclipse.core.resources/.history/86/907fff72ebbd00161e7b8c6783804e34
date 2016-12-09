@@ -1,0 +1,24 @@
+package be.vdab.taken;
+
+public class Woord {
+	private String woord;
+	
+	public Woord(String woord){
+		this.woord = woord;
+	}
+	
+	public boolean isPalindroom(){
+		String reverse = "";
+		int teller = woord.length();
+		while(teller > 0){
+			reverse = reverse + woord.charAt(teller);
+			teller = teller - 1;
+		}
+		if(reverse.equals(woord)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+}

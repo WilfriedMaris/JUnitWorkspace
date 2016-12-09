@@ -1,0 +1,40 @@
+package be.vdab.util;
+
+import static org.junit.Assert.*;
+
+import java.math.BigDecimal;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class StatistiekTest {
+	private Statistiek statistiek;
+	
+	@Before
+	public void before(){
+		statistiek = new Statistiek();
+	}
+
+	@Test
+	public void verzamelingMet1ElementisGemiddelde() {
+		BigDecimal[] verzameling = new BigDecimal[]{BigDecimal.valueOf(1)};
+		assertTrue(statistiek.getGemiddelde(verzameling) == BigDecimal.valueOf(1));
+	}
+	
+	@Test (expected = NullPointerException.class)
+	public void gemiddeldeVanVerzamelingMetNullKanNiet(){
+		statistiek.getGemiddelde(null);
+	}
+	
+	@Test
+	public void gemiddeldeVan3En1Is2(){
+		assertEquals(2, statistiek.getGemiddelde(
+				new BigDecimal[]{BigDecimal.valueOf(3),BigDecimal.valueOf(1)}));
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void hetGemiddeldeVanEenLegeVerzamelingKanJeNietBerekenen() {
+	Statistiek.getGemiddelde(new BigDecimal[] { });
+	}
+}
+

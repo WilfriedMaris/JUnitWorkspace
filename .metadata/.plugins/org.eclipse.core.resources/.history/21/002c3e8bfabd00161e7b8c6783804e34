@@ -1,0 +1,31 @@
+package be.vdab.taken;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class VeilingTest {
+
+	@Test
+	public void nogGeenBodDanBodIsNul() {
+		Veiling veiling = new Veiling();
+		assertEquals(0,veiling.getHoogsteBod());
+	}
+	
+	@Test
+	public void EenBodUitgevoerdHoogsteBodIsGelijkAanDitBod(){
+		Veiling veiling = new Veiling();
+		veiling.doeBod(100);
+		assertEquals(100, veiling.getHoogsteBod());
+	}
+	
+	@Test
+	public void MeerdereBiedingenHoogsteBodIsGelijkAanHoogsteBieding(){
+		Veiling veiling = new Veiling();
+		veiling.doeBod(100);
+		veiling.doeBod(400);
+		veiling.doeBod(200);
+		assertEquals(400, veiling.getHoogsteBod());
+	}
+
+}
