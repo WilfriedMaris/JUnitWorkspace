@@ -1,0 +1,13 @@
+package be.vdab.taken;
+
+public class Isbn {
+	
+	public Isbn(long nummer){
+		if()
+	}
+	
+	public String toString(){
+		throw new UnsupportedOperationException();
+	}
+
+}

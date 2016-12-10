@@ -1,0 +1,21 @@
+package be.vdab.taken;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class ISBNTest {
+	private ISBN isbn;
+	
+	@Before
+	public void before(){
+		isbn = new ISBN();
+	}
+
+	@Test
+	public void isbnBestaatUit13Cijfers() {
+		assertTrue(condition);
+	}
+
+}
