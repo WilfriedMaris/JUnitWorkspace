@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;&apos; to &apos;be.vdab.taken.ISBNTest.equalsOpTweeVerschillendeIsbnMoetFalseZijn()&apos;&#x0D;&#x0A;- Original project: &apos;applicatieMetTesten&apos;&#x0D;&#x0A;- Destination element: &apos;be.vdab.taken.ISBNTest.equalsOpTweeVerschillendeIsbnMoetFalseZijn()&apos;&#x0D;&#x0A;- Original element: &apos;be.vdab.taken.ISBNTest.equalsOpTweeVerschillendeIsbnMoetFalseZijn()&apos;" description="Copy method" destination="/src\/test\/java&lt;be.vdab.taken{ISBNTest.java[ISBNTest~equalsOpTweeVerschillendeIsbnMoetFalseZijn" element1="/src\/test\/java&lt;be.vdab.taken{ISBNTest.java[ISBNTest~equalsOpTweeVerschillendeIsbnMoetFalseZijn" flags="589830" id="org.eclipse.jdt.ui.copy" members="1" policy="org.eclipse.jdt.ui.copyMembers" stamp="1481487810290" version="1.0"/>
+</session>

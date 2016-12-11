@@ -1,0 +1,52 @@
+package be.vdab.taken;
+
+public class Isbn {
+	private final Long isbn;
+
+	public Isbn(Long nummer) 
+		String num = nummer.toString();
+		if (nummer > 0) {
+			if (num.length() == 13) {
+				if (num.startsWith("978") || num.startsWith("979")) {
+					int oneven = num.charAt(1) + num.charAt(3) + num.charAt(5) + num.charAt(7)
+							+ num.charAt(9) + num.charAt(11);
+					int even = num.charAt(2) + num.charAt(4) + num.charAt(6) + num.charAt(8)
+							+ num.charAt(10) + num.charAt(12);
+					System.out.println(oneven);
+					System.out.println(even);
+					even = even * 3;
+					Integer somBeide = oneven + even;
+					String naastHogerGet = somBeide.toString();
+					while (naastHogerGet.charAt(naastHogerGet.length() - 1) != 0) {
+						naastHogerGet = String.valueOf(Integer.parseInt(naastHogerGet) + 1);
+					}
+					Integer verschil = Integer.parseInt(naastHogerGet) - somBeide;
+					if (verschil == 10) {
+						if (num.charAt(13) == 0) {
+							this.isbn = Long.parseLong(num);
+						} else {
+							throw new IllegalArgumentException("ISBN nummer eindigt niet met 0");
+						}
+					} else {
+						if (num.charAt(13) == verschil) {
+							this.isbn = Long.parseLong(num);
+						} else {
+							throw new IllegalArgumentException("ISBN nummer eindigt niet met het verschil");
+						}
+					}
+				} else {
+					throw new IllegalArgumentException("ISBN nummer begint niet met 978 of 979");
+				}
+			} else {
+				throw new IllegalArgumentException("ISBN nummer is geen 13 cijfers lang.");
+			}
+		} else {
+			throw new IllegalArgumentException("ISBN nummer is geen 13 cijfers lang.");
+		}
+	}
+
+	public String toString() {
+		return isbn.toString();
+	}
+
+}
