@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
-<fullyQualifiedTypeName name="java.math.BigDecimal"/>
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
-<fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.stream.Stream"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="be.vdab.valueobjects.RekeningnummerTest"/>
+<fullyQualifiedTypeName name="be.vdab.entities.RekeningTest"/>
+<fullyQualifiedTypeName name="be.vdab.repositories.LandRepository"/>
+<fullyQualifiedTypeName name="be.vdab.repositories.LandRepositoryStub"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="be.vdab.entities.Land"/>
 </qualifiedTypeNameHistroy>

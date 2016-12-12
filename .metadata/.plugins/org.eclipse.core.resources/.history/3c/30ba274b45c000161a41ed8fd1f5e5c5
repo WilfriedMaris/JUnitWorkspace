@@ -1,0 +1,55 @@
+package be.vdab.taken;
+
+public class Isbn {
+	private final Long isbn;
+
+	public Isbn(Long nummer) {
+		String num = nummer.toString();
+		if (nummer > 0 && num.length() == 13 && num.startsWith("978") || num.startsWith("979")) {
+			// charAt begint van 0.
+			int oneven, even;
+			even = oneven = 0;
+			int index = -1;
+			for (int teller = 6; teller > 0; teller--) {
+				// char - '0' in talen die unicode gebruiken geeft de int waarde.
+				oneven = oneven + num.charAt(++index) - '0';
+				even = even + num.charAt(++index) - '0';
+			}
+			int hogertiental = even * 3 + oneven ;
+			while (hogertiental % 10 != 0) {
+				hogertiental++;
+			}
+			if (hogertiental - (oneven + even) == 10 && num.charAt(12) - '0' == 0) {
+				this.isbn = Long.parseLong(num);
+			} else {
+				if (num.charAt(12) - '0' == hogertiental - (oneven + even)) {
+					this.isbn = Long.parseLong(num);
+				} else {
+					throw new IllegalArgumentException("ISBN nummer eindigt niet met het verschil");
+				}
+			}
+		} else {
+			throw new IllegalArgumentException(
+					"ISBN nummer begint niet met 978 of 979, is geen 13 cijfers lang of is een negatief getal.");
+		}
+	}
+
+	@Override
+	public String toString() {
+		return isbn.toString();
+	}
+
+	@Override
+	public boolean equals(Object object) {
+		if (!(object instanceof Isbn)) {
+			return false;
+		}
+		Isbn anderIsbn = (Isbn) object;
+		return isbn.equals(anderIsbn.isbn);
+	}
+
+	@Override
+	public int hashCode() {
+		return isbn.intValue();
+	}
+}

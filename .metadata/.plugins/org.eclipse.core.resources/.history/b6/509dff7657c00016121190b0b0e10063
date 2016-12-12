@@ -1,0 +1,7 @@
+package be.vdab.repositories;
+import be.vdab.entities.Land;
+
+public class LandRepository {
+	Land read(String landcode);
+	int findOpperlakteAlleLanden();
+}

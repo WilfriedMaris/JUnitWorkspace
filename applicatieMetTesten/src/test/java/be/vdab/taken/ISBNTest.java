@@ -38,23 +38,34 @@ public class ISBNTest {
 	
 	@Test
 	public void equalsOpTweeDezelfdeIsbnMoetTrueZijn(){
-		assertEquals(new Isbn(9789048835157L), new Isbn(9789048835157L));
+		assertEquals(new Isbn(9789026336898L), new Isbn(9789026336898L));
 	}
 	
 	@Test
 	public void equalsOpTweeVerschillendeIsbnMoetFalseZijn(){
-		assertNotEquals(new Isbn(9789048835158L), new Isbn(9789048835157L));
+		assertNotEquals(new Isbn(9789400508040L), new Isbn(9789026336898L));
 	}
 	
 	@Test
 	public void hashCodeOpTweeDezelfdeIsbnMoetGelijkZijn(){
-		assertNotEquals(new Isbn(9789048835157L).hashCode(),
+		assertEquals(new Isbn(9789048835157L).hashCode(),
 				new Isbn(9789048835157L).hashCode());
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void isbnMagNietNegatiefZijn() {
 		new Isbn(-9789084847812L);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void hetNummer0IsVerkeerd() {
+	new Isbn(0L);
+	}
+	
+	@Test
+	public void toStringMoetHetNummerTeruggeven() {
+	long nummer = 9789027439642L;
+	assertEquals(nummer, Long.parseLong(new Isbn(nummer).toString()));
 	}
 
 }
