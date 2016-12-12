@@ -1,0 +1,18 @@
+package be.vdab.taken;
+
+import java.math.BigDecimal;
+
+public class WinstService {
+	private final OpbrengstRepository opbrengstRepo;
+	private final KostRepository kostRepo;
+	
+	public WinstService(OpbrengstRepository opbrengstRepo, KostRepository kostRepo){
+		this.opbrengstRepo = opbrengstRepo;
+		this.kostRepo = kostRepo;
+	}
+	
+	public BigDecimal getWinst(){
+		return opbrengstRepo.findTotaleOpbrengst().subtract(kostRepo.findTotaleKost());
+	}
+
+}
