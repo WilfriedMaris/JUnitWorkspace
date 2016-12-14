@@ -4,6 +4,6 @@ import java.math.BigDecimal;
 
 public interface KostRepository {
 	
-	public BigDecimal findTotaleKost();
+	BigDecimal findTotaleKost();
 
 }

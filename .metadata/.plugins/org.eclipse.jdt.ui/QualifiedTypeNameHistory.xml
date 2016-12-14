@@ -9,11 +9,12 @@
 <fullyQualifiedTypeName name="be.vdab.entities.RekeningTest"/>
 <fullyQualifiedTypeName name="be.vdab.repositories.LandRepository"/>
 <fullyQualifiedTypeName name="be.vdab.repositories.LandRepositoryStub"/>
-<fullyQualifiedTypeName name="org.junit.Test"/>
-<fullyQualifiedTypeName name="be.vdab.entities.Land"/>
-<fullyQualifiedTypeName name="java.math.BigDecimal"/>
 <fullyQualifiedTypeName name="org.junit.Before"/>
 <fullyQualifiedTypeName name="be.vdab.taken.OpbrengstRepositoryStub"/>
 <fullyQualifiedTypeName name="be.vdab.taken.KostRepositoryStub"/>
 <fullyQualifiedTypeName name="be.vdab.taken.WinstService"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="be.vdab.entities.Land"/>
+<fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
 </qualifiedTypeNameHistroy>

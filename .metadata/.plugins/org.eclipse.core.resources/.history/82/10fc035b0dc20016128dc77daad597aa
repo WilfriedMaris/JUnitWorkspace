@@ -1,0 +1,27 @@
+package be.vdab.taken;
+
+import static org.junit.Assert.assertEquals;
+
+import java.math.BigDecimal;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class WinstServiceTest {
+	private WinstService winstService;
+	private OpbrengstRepository opbrengstRepo;
+	private KostRepository kostRepo;
+	
+	@Before
+	public void before(){
+		opbrengstRepo = new OpbrengstRepositoryStub();
+		kostRepo = new KostRepositoryStub();
+		winstService = new WinstService(opbrengstRepo, kostRepo);
+	}
+	
+	@Test
+	public void winstMoet501Zijn(){
+		assertEquals(BigDecimal.valueOf(501), winstService.getWinst());
+	}
+
+}

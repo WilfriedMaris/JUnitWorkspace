@@ -1,0 +1,23 @@
+package be.vdab.taken;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class WinstServiceTest {
+	private WinstService winstService;
+	
+	@Before
+	public void before(){
+		OpbrengstRepository opbrengstRepo = new OpbrengstRepositoryStub();
+		KostRepository kostRepo = new KostRepositoryStub();
+		winstService = new WinstService(opbrengstRepo, kostRepo);
+	}
+	
+	@Test
+	public void winstMoet501Zijn(){
+		assertEquals(501, winstService.getWinst());
+	}
+
+}
